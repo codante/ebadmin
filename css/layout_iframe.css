@@ -1,0 +1,20 @@
+/* 
+iframe页面布局
+*/
+html{height:100%;overflow-x: hidden; overflow-y: auto;}
+body{height:100%;overflow-x:hidden;height:auto;padding:6px;background-color: #fff;box-shadow: inset 2px 0px 1px 0px rgba(0, 0, 0, 0.03);}
+
+#main{overflow:auto;zoom:1;}
+	.main-unit{position:relative;background:#fff;margin-bottom:7px;
+	-webkit-border-bottom-right-radius: 4px;-moz-border-bottom-right-radius: 4px;border-bottom-right-radius: 4px;-webkit-border-bottom-left-radius: 4px;-moz-border-bottom-left-radius: 4px;border-bottom-left-radius: 4px;}
+	.main-unit:last-child{margin-bottom:0px;}
+
+	.main-unit .header{line-height:28px;color:#444;margin-bottom: 5px;}
+	.main-unit .header span{padding-left:30px;font-size:18px;}
+	.unit-container{padding:10px 30px 0px 30px;zoom:1;overflow:auto;}
+	.main-unit h4{padding:6px 6px 6px 6px;font-size:14px;}
+	.main-unit h5{padding:16px 0 6px 0;font-size:16px;font-weight:bold;}
+	.main-unit hr{height:1px;border:none;border-bottom:1px solid #ddd;}
+
+.main-unit:first-child{border-top:none;}
+.main-unit{border-top: 1px solid #ddd;padding-bottom: 10px;padding-top: 10px;}

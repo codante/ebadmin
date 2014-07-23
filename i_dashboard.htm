@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/layout_iframe.css" rel="stylesheet" type="text/css" />
+<link href="css/uniform.css" rel="stylesheet" type="text/css" /><!--表单美化-->
+<link href="css/validationEngine.jquery.css" rel="stylesheet" type="text/css" /><!--表单验证-->
+
+<script type="text/javascript" src="lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="lib/jquery.uniform.js"></script>
+<script type="text/javascript" src="lib/jquery.validationengine-cn.js"></script>
+<script type="text/javascript" src="lib/jquery.validationengine.js"></script>
+<SCRIPT type="text/javascript">
+$(document).ready(function () {
+
+	//表单美化
+	$(".uniform-style input, .uniform-style textarea, .uniform-style select, .uniform-style button").uniform();
+
+	//表单输入验证
+	$("#example-form").validationEngine();
+
+});
+
+//表格首列的全选&反选控制
+function listSelectAll(opt){
+	if (opt.attr("checked"))
+		opt.parents("table").find("td.check input").attr("checked",true);
+	else
+		opt.parents("table").find("td.check input").attr("checked",false);
+}
+
+function listToggleAll(opt){
+	opt.parents("table").find("td.check input").click();
+}
+</SCRIPT>
+<title>网页标题</title>
+
+</head>
+<body>
+
+<div class="main-unit">
+	<div class="header"><span>快捷面板</span></div>
+	<div class="unit-container">
+		<div class="widget-hint">
+			DASHBOARD: 系统常用功能快捷面板，推荐用于系统登录后的进入页；右上角数字代表未处理的消息数
+		</div>
+		<ul class="dashboard">
+			<li>
+				<a href="#" class="mask" title="待审批任务"></a>
+				<div class="untreat"><div>3</div></div>
+				<a href="#"><img class="icon" src="images/icons/01.png"></a>
+				<div class="title"><a href="#">待审批任务</a></div>
+			</li>
+			<li>
+				<a href="#" class="mask" title="待审批任务"></a>
+				<a href="#"><img class="icon" src="images/icons/02.png"></a>
+				<div class="title"><a href="#">终端管理</a></div>
+			</li>
+			<li>
+				<a href="#" class="mask" title="待审批任务"></a>
+				<a href="#"><img class="icon" src="images/icons/03.png"></a>
+				<div class="title"><a href="#">群组管理</a></div>
+			</li>
+			<li>
+				<a href="#" class="mask" title="待审批任务"></a>
+				<a href="#"><img class="icon" src="images/icons/04.png"></a>
+				<div class="title"><a href="#">地市管理</a></div>
+			</li>
+			<li>
+				<a href="#" class="mask" title="待审批任务"></a>
+				<a href="#"><img class="icon" src="images/icons/05.png"></a>
+				<div class="title"><a href="#">广告商管理</a></div>
+			</li>
+			<li>
+				<a href="#" class="mask" title="待审批任务"></a>
+				<a href="#"><img class="icon" src="images/icons/06.png"></a>
+				<div class="title"><a href="#">代理商管理</a></div>
+			</li>
+			<li>
+				<a href="#" class="mask" title="待审批任务"></a>
+				<a href="#"><img class="icon" src="images/icons/07.png"></a>
+				<div class="title"><a href="#">广告管理</a></div>
+			</li>
+			<li>
+				<a href="#" class="mask" title="待审批任务"></a>
+				<a href="#"><img class="icon" src="images/icons/08.png"></a>
+				<div class="title"><a href="#">档期管理</a></div>
+			</li>
+		</ul><!--dashborad-->
+	</div>
+</div>
+
+
+</body>
+</html>

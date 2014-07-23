@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/layout_iframe.css" rel="stylesheet" type="text/css" />
+<link href="css/daterangepicker.css" rel="stylesheet" type="text/css"/>
+<link href="css/elusive-webfont.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="lib/ebadmin.js"></script>
+<script src="lib/moment.min.js"></script><!--时间段选择js-->
+<script src="lib/daterangepicker.js"></script><!--时间段选择js-->
+<title>网页标题</title>
+
+</head>
+<body>
+
+
+
+<div class="main-unit">
+	<div class="header"><span>搜索</span></div>
+	<div class="unit-container">
+
+		<div class="widget-hint">
+			SEARCH-TYPE-1：基本搜索
+		</div>
+		<div class="search-panel clearfix">
+			<input class="ipt-txt" value="提示文字"/>
+			<a class="e-button"><span class="el-icon-search"></span>搜索</a> 
+		</div>
+
+		<div class="widget-hint">
+			SEARCH-TYPE-2：一行以内的复杂搜索（以1200像素为标准）<br/>
+			INPUT-DATE-RANGE: 时间段选框 <a target="_blank" href="https://rawgit.com/longbill/jquery-date-range-picker/master/index.html">datepicker插件地址</a>
+			<!--2014年5月，分辨率宽度&gt;1200以上的用户占78.5% http://resolve.data.cnzz.com/ -->
+		</div>
+		<div class="search-panel clearfix">
+			<div class="label">XX类型：</div>
+			<div class="select">通话</div>
+			<div class="label">XX类型：</div>
+			<div class="select">主叫</div>
+			<input class="ipt-txt" value="提示文字"/>
+			<input id="ipt-date-range" class="date-range">
+			<!--<input class="ipt-txt date" value="时间段"/>-->
+			<a class="e-button"><span class="el-icon-search"></span>搜索</a> 
+		</div>
+
+		<div class="widget-hint">
+			SEARCH-TYPE-3：条件众多的复杂搜索
+		</div>
+		<div class="search-advance">
+			<dl>
+				<dt>条件1：</dt>
+				<dd><div class="select"></div></dd>
+				<dt>条件2：</dt>
+				<dd><div class="select"></div></dd>
+				<div class="clear"></div><!--换行-->
+				<dt>条件3：</dt>
+				<dd><div class="select"></div></dd>
+				<dt>文字勿超过八个字：</dt>
+				<dd><div class="select"></div></dd>
+				<div class="clear"></div>
+				<dt>条件4：</dt>
+				<dd><div class="select"></div></dd>
+				<dt>时间段：</dt>
+				<dd><input id="ipt-date-range" class="date-range" value="2014/03/15~2014/04/15"></dd>
+				<div class="clear"></div>
+				<dt>条件6：</dt>
+				<dd class="long"><!--选项较多的情况-->
+					<input type="checkbox"/><label>浏览量(PV)</label><input type="checkbox"/><label>独立访客(UV)</label><input type="checkbox"/><label>访问次数(VV)</label><input type="checkbox"/><label>独立IP</label><input type="checkbox"/><label>平均浏览次数</label><input type="checkbox"/><label>浏览量(PV)</label><input type="checkbox"/><label>独立访客(UV)</label><input type="checkbox"/><label>访问次数(VV)</label><input type="checkbox"/><label>独立IP</label><input type="checkbox"/><label>平均浏览次数</label>
+				</dd>
+				<div class="clear"></div>
+				<dt></dt>
+				<dd><input type="radio" name="st" checked/><label>精确查询</label><input type="radio" name="st"/><label>模糊查询</label></dd>
+			</dl>
+			<div class="clearfix"><a class="e-button"><span class="el-icon-search"></span>搜索</a></div>
+		</div>
+
+
+		<div class="widget-hint">
+			SEARCH-TYPE-4："新增"按钮、主搜索框、高级搜索面板的组合
+		</div>
+		<div class="search-complex">
+			<div class="fl">
+				<a class="e-button"><span class="el-icon-plus-sign"></span>新建工单</a>
+			</div>
+			<div class="search-panel fr">
+				<input class="ipt-txt" value="提示文字"/>
+				<a class="e-button"><span class="el-icon-search"></span>搜索</a> 
+				<div class="label"><a class="more">更多筛选条件</a></div>
+			</div>
+			<div class="search-advance">
+				<a class="close"><span class="el-icon-remove"></span></a>
+				<dl>
+					<dt>条件1：</dt>
+					<dd><input class="ipt-txt"/></dd>
+					<dt>条件2：</dt>
+					<dd><input class="ipt-txt"/></dd>
+					<div class="clear"></div><!--换行-->
+					<dt>条件3：</dt>
+					<dd><input class="ipt-txt"/></dd>
+					<dt>文字勿超过八个字：</dt>
+					<dd><input class="ipt-txt"/></dd>
+					<div class="clear"></div>
+					<dt>条件4：</dt>
+					<dd><div class="select"></div></dd>
+					<dt>条件5：</dt>
+					<dd><div class="select"></div></dd>
+					<div class="clear"></div>
+					<dt>条件6：</dt>
+					<dd class="long"><!--选项较多的情况-->
+						<input type="checkbox"/><label>浏览量(PV)</label><input type="checkbox"/><label>独立访客(UV)</label><input type="checkbox"/><label>访问次数(VV)</label><input type="checkbox"/><label>独立IP</label><input type="checkbox"/><label>平均浏览次数</label><input type="checkbox"/><label>浏览量(PV)</label><input type="checkbox"/><label>独立访客(UV)</label><input type="checkbox"/><label>访问次数(VV)</label><input type="checkbox"/><label>独立IP</label><input type="checkbox"/><label>平均浏览次数</label>
+					</dd>
+					<div class="clear"></div>
+				</dl>
+				<div class="clearfix"><a class="e-button">搜索</a><a class="e-button">清空</a></div>
+			</div>
+		</div>
+
+
+		<!--<h5>用户信息</h5>-->
+		<div class="widget-hint">
+			说明：3列信息显示
+		</div>
+		<ul class="detail-3col">
+			<li><span>主号：<span class="font-red">13800000000</span></span></li>
+			<li><span>主号省份：广东</span></li>
+			<li><span>业务状态：正常</span></li>
+			<li><span>已成功办理虚拟副号次数：7</span></li>
+		</ul>
+
+
+	</div>
+</div><!--end of main-unit-->
+
+
+
+</body>
+</html>
